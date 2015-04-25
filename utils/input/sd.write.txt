@@ -1,0 +1,4 @@
+odg|application/vnd.oasis.opendocument.graphics
+otg|application/vnd.oasis.opendocument.graphics-template
+fodg|text/xml
+pdf|application/pdf

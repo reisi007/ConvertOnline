@@ -1,0 +1,92 @@
+// Global variable overrides. Must be declared before importing Valo.
+
+$v-background-color: rgb(255,255,255);
+$v-focus-color: rgb(0,129,227);
+$v-app-background-color: rgb(255,255,255);
+$v-app-loading-text: "Loading Reisisoft Conveter... "; // added this line
+
+// Colour variables
+$calc-border-colour: #00A62F;
+$draw-border-colour: #D1B00C;
+$impress-border-colour: #E6432E;
+$math-border-colour: #787878;
+$writer-border-colour: #054BFF;
+
+@import "../valo/valo.scss";
+
+@mixin converterTheme {
+  @include valo;
+.invisibleLink{
+text-decoration: none;
+    color: black;
+}
+.v-label{
+        font-weight: normal;
+    }
+    
+ // Calc
+    .r-sc {
+        border-radius: 4px;
+        border: 6px solid $calc-border-colour;
+    }
+    
+    .r-scf { 
+        border-radius: 20px;
+        padding: 10px;
+        border: 6px solid $calc-border-colour;
+    }
+    
+    // Draw
+    .r-sd {
+        border-radius: 4px;
+        border: 6px solid $draw-border-colour;
+    }
+    
+    .r-sdf {
+        border-radius: 20px;
+        padding: 10px;
+        border: 6px solid $draw-border-colour;
+    }
+    
+    // Impress
+    .r-si {
+        border-radius: 4px;
+        border: 6px solid $impress-border-colour;
+    } 
+    
+    .r-sif { 
+        border-radius: 20px;
+        padding: 10px;
+        border: 6px solid $impress-border-colour;
+    }
+    
+    // Math
+    .r-sm {
+        border-radius: 4px;
+        border: 6px solid $math-border-colour;
+    } 
+ 
+    .r-smf {
+        border-radius: 20px;
+        padding: 10px;
+        border: 6px solid $math-border-colour;
+    }
+
+    // Writer
+    .r-sw {
+        border-radius: 4px;
+        border: 6px solid $writer-border-colour;
+    } 
+ 
+    .r-swf {
+        border-radius: 20px;
+        padding: 10px;
+        border: 6px solid $writer-border-colour;
+    }
+    
+    // Default
+    .r-default {
+        border-radius: 4px;
+        border: 6px solid #bababa;
+    }
+}

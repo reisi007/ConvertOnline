@@ -1,0 +1,10 @@
+ods|application/vnd.oasis.opendocument.spreadsheet
+ots|application/vnd.oasis.opendocument.spreadsheet-template
+fods|text/xml
+uos|application/octet-stream
+xls|application/vnd.ms-excel
+xlt|application/vnd.ms-excel
+xslx|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+dbf|application/dbase
+slk|application/vnd.ms-excel
+pdf|application/pdf

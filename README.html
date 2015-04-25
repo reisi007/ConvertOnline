@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Convert Project setup</h1>
+
+<ul>
+<li>
+<p>Tomcat 8 + Java 8</p>
+</li><li>
+<p>MySQL Server</p>
+</li>
+</ul>
+
+<p>Context parameters are in the web.xml deployment descriptor</p>
+
+<h2>Job Server</h2>
+
+<ul>
+<li>
+<p>Just deploy the war file to Tomcat</p>
+</li>
+</ul>
+
+<h2>Worker</h2>
+
+<h3>Context Parameters</h3>
+
+<table>
+<tr>
+<td>
+<p>at.reisisoft.convert.worker.soffice</p>
+</td><td>
+<p>Path to the soffice of Libre/OpenOffice</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.threads</p>
+</td><td>
+<p>The number of conversions possible simultaneously</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.rmi.server</p>
+</td><td>
+<p>The host of the Job server</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.jdbc.url</p>
+</td><td>
+<p>The JDBC connection URL to the MySQL server</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.jdbc.un</p>
+</td><td>
+<p>The user name for MySQL</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.jdbc.pw</p>
+</td><td>
+<p>The password for MySQL</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.officevendor</p>
+</td><td>
+<p>The vendor of the office suite</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.from</p>
+</td><td>
+<p>The email address the converted documents get sent from</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.smtp</p>
+</td><td>
+<p>The SMTP server for the mail</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.pw</p>
+</td><td>
+<p>The password for the SMTP server</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.usessl</p>
+</td><td>
+<p>The boolean value, if SSL/TLS should be used</p>
+</td>
+</tr>
+</table>
+
+<h3>Configuration notes</h3>
+
+<p>Please keep in mind, that the CA certificate has to be accepted by the Java VM (especially for self signed certificates) and that there is a default timeout (180 sec) which limits the number of possible conversions possible simultaneously.</p>
+
+<h2>UI</h2>
+
+<h3>Context Parameters</h3>
+
+<table>
+<tr>
+<td>
+<p>at.reisisoft.convert.worker.jdbc.url</p>
+</td><td>
+<p>The JDBC connection URL to the MySQL server</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.jdbc.un</p>
+</td><td>
+<p>The user name for MySQL</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.worker.jdbc.pw</p>
+</td><td>
+<p>The password for MySQL</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.from</p>
+</td><td>
+<p>The email address the converted documents get sent from</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.smtp</p>
+</td><td>
+<p>The SMTP server for the mail</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.pw</p>
+</td><td>
+<p>The password for the SMTP server</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.email.usessl</p>
+</td><td>
+<p>The boolean value, if SSL/TLS should be used</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.convert.rmi.server</p>
+</td><td>
+<p>The host of the Job server</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.converter.mail.devmail</p>
+</td><td>
+<p>The mail address detzailed messages should be sent to</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.worker.upload.unit</p>
+</td><td>
+<p>The unit for maximum file size (MB,KB,B)</p>
+</td>
+</tr><tr>
+<td>
+<p>at.reisisoft.worker.upload.maxsize</p>
+</td><td>
+<p>An Integer for the maximum size</p>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

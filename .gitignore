@@ -3,3 +3,6 @@
 **/.classpath
 **/.project
 **/bin/**
+jobserver/WebContent/WEB-INF/web.xml
+ui/WebContent/WEB-INF/web.xml
+worker/WebContent/WEB-INF/web.xml

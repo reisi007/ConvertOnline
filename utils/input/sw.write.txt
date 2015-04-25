@@ -1,0 +1,10 @@
+odt|application/vnd.oasis.opendocument.text
+ott|application/vnd.oasis.opendocument.text-template
+fodt|text/xml
+docx|application/vnd.openxmlformats-officedocument.wordprocessingml.document
+doc|application/msword
+dot|application/msword
+rtf|application/rtf
+txt|text/plain
+html|text/html
+pdf|application/pdf

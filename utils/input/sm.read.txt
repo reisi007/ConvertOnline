@@ -1,0 +1,3 @@
+odf|application/vnd.oasis.opendocument.formula
+sxm|application/vnd.sun.xml.math
+mml|text/plain
