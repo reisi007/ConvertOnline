@@ -2,6 +2,7 @@ package at.reisisoft.convert.server;
 
 import java.io.IOException;
 import java.rmi.RemoteException;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -35,8 +36,8 @@ public class StartUp implements ServletContextListener {
 					"Could not shutdown RMI server properly", e);
 		} finally {
 			saveJobQueue(jobQueue);
+			t.interrupt();
 		}
-		t.interrupt();
 	}
 
 	@Override
@@ -45,26 +46,22 @@ public class StartUp implements ServletContextListener {
 		try {
 			server = Server.getServer(new JobBlockingQueue(), RmiHelper.QUEUE);
 			server.start();
-			Runnable r = new Runnable() {
+			t = new Thread() {
 
 				@Override
 				public void run() {
-					while (true) {
+					while (!isInterrupted()) {
 						jobQueue.hashCode();
 						try {
-							Thread.sleep(10000);
+							TimeUnit.DAYS.sleep(1);
 						} catch (InterruptedException e1) {
-						}
-
-						try {
-							Thread.sleep(3000);
-						} catch (InterruptedException e) {
+							interrupt();
 						}
 					}
 
 				};
 			};
-			t = new Thread(r);
+
 			t.start();
 		} catch (RemoteException e) {
 			throw new RuntimeException("Could not start RMI server!", e);
